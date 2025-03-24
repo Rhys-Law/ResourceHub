@@ -1,0 +1,117 @@
+/* === Global Reset & Font === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #0099ff; /* Bright blue page background */
+  }
+  
+  /* === Header (Black Top Bar) === */
+  header {
+    background-color: #000; /* black background */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+  }
+  
+  header .logo {
+    position: absolute;
+    left: 1rem;
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  /* === Navigation (Bright Blue Bar) === */
+  nav {
+    background-color: #0099ff;
+    padding: 0.5rem 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* center the nav items */
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: #0099ff; /* same as nav bar */
+    border-radius: 4px;
+  }
+  
+  nav a:hover {
+    background-color: #0077cc; /* darker blue on hover */
+  }
+  
+  nav a.active {
+    background-color: #141290; /* green highlight for 'Home' */
+    color: #000;               /* black text on green */
+  }
+  
+  /* === Hero Section with Placeholders === */
+  .hero {
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+    /* The bright blue background is already from body, 
+       so no extra background-color is needed here unless you want it. */
+    padding: 1rem 0;
+  }
+  
+  .placeholder-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+  }
+  
+  .placeholder-box {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc; /* gray squares */
+    border: 2px solid #999;
+    border-radius: 4px;
+  }
+  
+  .hero-text {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* === White Content Sections === */
+  section {
+    background-color: #fff;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  section h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* === Footer (Black) === */
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
