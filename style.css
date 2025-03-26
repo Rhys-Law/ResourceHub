@@ -115,3 +115,33 @@
     padding: 1rem;
     margin-top: 1rem;
   }
+
+/* Forum content container (you likely already have this) */
+.forum-content {
+  background-color: #fff;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Each forum row with placeholder, heading, and paragraph */
+.forum-item {
+  display: flex;
+  align-items: flex-start; /* top-align items */
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Give the heading a fixed width so paragraphs align */
+.forum-item h3 {
+  flex: 0 0 160px; /* adjust width as needed for your longest heading */
+  margin: 0;       /* remove extra space */
+}
+
+/* Paragraph expands to fill remaining space */
+.forum-item p {
+  flex: 1;
+  margin: 0;
+}
+
