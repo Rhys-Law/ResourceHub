@@ -136,3 +136,24 @@
   margin: 0;
 }
 
+.services-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.left-square img {
+  order: 0;
+}
+.left-square h3 {
+  order: 1;
+}
+
+
+.right-square h3 {
+  order: 0;
+}
+.right-square img {
+  order: 1;
+}
