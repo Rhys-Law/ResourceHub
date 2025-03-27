@@ -1,4 +1,3 @@
-/* === Global Reset & Font === */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@
     background-color: #0099ff; /* Bright blue page background */
   }
   
-  /* === Header (Black Top Bar) === */
   header {
     background-color: #000; /* black background */
     color: #fff;
@@ -33,7 +31,6 @@
     font-size: 1.8rem;
   }
   
-  /* === Navigation (Bright Blue Bar) === */
   nav {
     background-color: #0099ff;
     padding: 0.5rem 0;
@@ -42,7 +39,7 @@
   nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* center the nav items */
+    justify-content: center; 
     gap: 1rem;
   }
   
@@ -51,26 +48,24 @@
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
-    background-color: #0099ff; /* same as nav bar */
+    background-color: #0099ff; 
     border-radius: 4px;
   }
   
   nav a:hover {
-    background-color: #0077cc; /* darker blue on hover */
+    background-color: #0077cc; 
   }
   
   nav a.active {
-    background-color: #141290; /* green highlight for 'Home' */
-    color: #000;               /* black text on green */
+    background-color: #141290; 
+    color: #000;               
   }
   
-  /* === Hero Section with Placeholders === */
+  
   .hero {
     width: 80%;
     margin: 1rem auto;
     text-align: center;
-    /* The bright blue background is already from body, 
-       so no extra background-color is needed here unless you want it. */
     padding: 1rem 0;
   }
   
@@ -83,7 +78,7 @@
   .placeholder-box {
     width: 150px;
     height: 150px;
-    background-color: #ccc; /* gray squares */
+    background-color: #ccc; 
     border: 2px solid #999;
     border-radius: 4px;
   }
@@ -94,7 +89,7 @@
     line-height: 1.4;
   }
   
-  /* === White Content Sections === */
+  
   section {
     background-color: #fff;
     width: 80%;
@@ -107,7 +102,7 @@
     margin-bottom: 0.5rem;
   }
   
-  /* === Footer (Black) === */
+  
   footer {
     background-color: #000;
     color: #fff;
@@ -116,7 +111,6 @@
     margin-top: 1rem;
   }
 
-/* Forum content container (you likely already have this) */
 .forum-content {
   background-color: #fff;
   width: 80%;
@@ -125,21 +119,18 @@
   border-radius: 8px;
 }
 
-/* Each forum row with placeholder, heading, and paragraph */
 .forum-item {
   display: flex;
-  align-items: flex-start; /* top-align items */
+  align-items: flex-start; 
   gap: 1rem;
   margin: 1.5rem 0;
 }
 
-/* Give the heading a fixed width so paragraphs align */
 .forum-item h3 {
-  flex: 0 0 160px; /* adjust width as needed for your longest heading */
-  margin: 0;       /* remove extra space */
+  flex: 0 0 160px; 
+  margin: 0;       
 }
 
-/* Paragraph expands to fill remaining space */
 .forum-item p {
   flex: 1;
   margin: 0;
