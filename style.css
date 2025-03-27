@@ -147,12 +147,12 @@
   order: 0;
 }
 .left-square h3 {
-  order: 0;
+  order: 1;
 }
 
 
 .right-square h3 {
-  order: 1;
+  order: 0;
 }
 .right-square img {
   order: 1;
