@@ -50,7 +50,7 @@
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="5" required></textarea><br><br>
             
-            <button type="submit">Send Email</button>
+            <button type="button" onclick="sendEmail">Send Email</button>
         </form>
         <!--Confirmation message-->
         <div id="confirmation"></div>
@@ -61,15 +61,12 @@
     </footer>
 
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function(noSubmit)) {
-            noSubmit.preventDefault();
-            this.reset();
+        function sendEmail() {
+            //Clear form fields
+            document.getElementById("contactForm").reset();
+            //Confirmation message displayed
             var confirm = document.getElementById("confirmation");
             confirm.textContent = "Email sent!";
-            /*Clear message*/
-            setTimeout(function() {
-                confirm.textContent = "";
-            }, 3000)
         }
     </script>
 </body>
