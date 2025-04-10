@@ -1,52 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - IT Resource Hub</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
-    <h1>Services</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - IT Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
+      <h1>Services</h1>
+    </header>
 
   
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="forum.html">Community Forum</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+    <nav>
+      <div class="nav-container">
+          <ul class="center-nav">
+              <li><a href="index.html" >Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html" class="active">Services</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="comforum.html">Community Forum</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </div>
   </nav>
 
-  <section class="services-content">
-    <img src="Images/HelpfulResource.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-    <h3>Step-By-Step Tutorials</h3>
-    
-    <div class="services-item right-square">
-      <img src="Images/CareerAssistance.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-      <h3>Career Assistance</h3>
-    </div>
-
-    <div class="services-item left-square">
-      <img src="Images/Challenge.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-      <h3>Daily Challenges</h3>
-    </div>
-
-    <div class="services-item right-square">
-      <img src="Images/Quiz.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-      <h3>Take a Quiz!</h3>
-    </div>
-  </section>
+    <section class="services-content">
+      <!--First Item-->
+      <div class="services-item">
+        <img src="Images/HelpfulResource.jpg" alt="Step-By-Step Tutorials" width="200" height="200">
+        <h3>Step-By-Step Tutorials</h3>
+        <div class="service-button">
+          <a href="tutorials.html" class="service-btn">View Tutorials</a>
+        </div>
+      </div>
+      <!-- Service 2: Career Assistance -->
+      <div class="services-item">
+        <img src="Images/CareerAssistance.jpg" alt="Career Assistance" width="200" height="200">
+        <h3>Career Assistance</h3>
+        <div class="service-button">
+          <a href="career-assistance.html" class="service-btn">Explore Careers</a>
+        </div>
+      </div>
+      <!-- Service 3: Daily Challenges -->
+      <div class="services-item">
+        <img src="Images/Challenge.jpg" alt="Daily Challenges" width="200" height="200">
+        <h3>Daily Challenges</h3>
+        <div class="service-button">
+          <a href="daily-challenges.html" class="service-btn">Try a Challenge</a>
+        </div>
+      </div>
+      <!-- Service 4 -->
+      <div class="services-item">
+        <img src="Images/Quiz.jpg" alt="Take a Quiz" width="200" height="200">
+        <h3>Take a Quiz!</h3>
+        <div class="service-button">
+          <a href="quiz.html" class="service-btn">Start Quiz</a>
+        </div>
+      </div>
+    </section>
 
   
-  <footer>
-    <p>&copy; 2025 IT Resource Hub. All rights reserved.</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 IT Resource Hub. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources - IT Resource Hub</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
-    <h1>Resources</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - IT Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
+      <h1>Resources</h1>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="resources.html" class="active">Resources</a></li>
-      <li><a href="forum.html">Community Forum</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+    <nav>
+      <div class="nav-container">
+          <ul class="center-nav">
+              <li><a href="index.html" >Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="resources.html" class="active">Resources</a></li>
+              <li><a href="comforum.html">Community Forum</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </div>
   </nav>
 
-  <section class="resources-content">
-    <div class="resource-item">
-        <img src="Images/Certs.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-        <h3>Certifications and Classes</h3>
-        <p>CompTIA A+, Security+, Network+: Entry level certifications to start your career.<br>
-        Cisco CCNA: Networking certification for higher level learners.<br>
-        Recommended Classes: Explore options at USC or online platforms.</p>
-    </div>
+    <section class="resources-content">
+      <div class="resource-item">
+        <img src="Images/Certs.jpg" alt="Q&A" class="forum-icon" width="300" height="200">
+        <div class="resource-button">
+          <a href="certifications.html" class="resource-btn">View Certifications &amp; Classes</a>
+        </div>
+        <p>
+          <strong>CompTIA A+, Security+, Network+:</strong> Entry level certifications to start your career.<br>
+          <strong>Cisco CCNA:</strong> Advanced networking certification for professionals.<br>
+          <strong>Recommended Classes:</strong> Explore options at USC or online platforms.
+        </p>
+      </div>
 
-    <div class="resource-item">
-        <img src="Images/PracticeTools.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-        <h3>Practice Tools and Applications</h3>
-        <p>CodeAcademy: Learn coding easily.<br>
-        Kali Linux: Practice ethical hacking safely.<br>
-        Wireshark: Analyze network traffic to improve your security skills.</p>
-    </div>
+      <div class="resource-item">
+        <img src="Images/PracticeTools.jpg" alt="Q&A" class="forum-icon" width="300" height="200">
+        <div class="resource-button">
+          <a href="tools.html" class="resource-btn">View Tools &amp; Apps</a>
+        </div>
+        <p>
+          <strong>CodeAcademy:</strong> Learn coding with interactive lessons.<br>
+          <strong>Kali Linux:</strong> Ethical hacking tools for security practice.<br>
+          <strong>Wireshark:</strong> Analyze network traffic to improve your security skills.
+        </p>
+      </div>
 
-    <div class="resource-item">
-        <img src="Images/CareerGuidance.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-        <h3>Career Guidance</h3>
-        <p>Resume templates for IT roles.<br>
-        FAQs from interviews for tech jobs.<br>
-        Tips for internships and job openings.</p>
-    </div>
-  </section>
+      <div class="resource-item">
+        <img src="Images/CareerGuidance.jpg" alt="Q&A" class="forum-icon" width="300" height="200">
+        <div class="resource-button">
+          <a href="guidance.html" class="resource-btn">View Career Guidance</a>
+        </div>
+        <p>
+          <strong>Resume Templates:</strong> Polished templates for IT roles.<br>
+          <strong>Interview FAQs:</strong> from interviews for tech jobs.<br>
+          <strong>Internship &amp; Job Tips:</strong>Expert advice to land your next opportunity.
+        </p>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 IT Resource Hub. All rights reserved.</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 IT Resource Hub. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

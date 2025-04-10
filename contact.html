@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - IT Resource Hub</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - IT Resource Hub</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
     <header>
-        <div style="display: flex; align-items: center;">
-            <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" style="width: 100px; height: auto; margin-right: 10px;">
+            <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
             <h1>Contact Us</h1>
-        </div>
-        <nav>
-            <ul style="list-style: none; padding: 0;">
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="center-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="forum.html">Community Forum</a></li>
+                <li><a href="comforum.html">Community Forum</a></li>
                 <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
-        </nav>
-    </header>
-    
-    <section style="line-height: 1.4;">
+        </div>
+    </nav>
+
+    <!--Get in touch information-->
+    <section class="contact-info">
         <h2>Get in Touch</h2>
-        <p>Email us with any questions or inquiries or call XXX-XXX-XXXX.<br>
-         We will be happy to assist you and set up a meeting!</p>
+        <p>
+            Email us with any questions or inquiries or call XXX-XXX-XXXX.<br>
+            We will be happy to assist you and set up a meeting!
+        </p>
     </section>
     
-    <section>
+    <!--Contact form-->
+    <section class="contact-form">
         <h2>Contact Form</h2>
         <form action="#" method="post">
             <label for="name">Name:</label><br>

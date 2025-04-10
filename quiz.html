@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Quiz! - IT Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
+        <h1>Take a Quiz!</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="services.html" class ="back-button">Back</a>
+            <ul class="centered-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="comforum.html">Community Forum</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Quiz Content Section -->
+    <section class="quiz-content">
+        <h2>IT Skills Quiz</h2>
+        <div id="quiz-container">
+            <!-- Quiz question will be injected here -->
+        </div>
+  </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 IT Resource Hub. All rights reserved.</p>
+    </footer>
+
+  <!-- JavaScript for interactive quiz -->
+    <script>
+    // Define an array of quiz questions
+        const quizQuestions = [
+            {
+                question: "What does 'HTTP' stand for?",
+                choices: [
+                "HyperText Transfer Protocol",
+                "Hyperlink Text Tool Protocol",
+                "Home Transfer Text Protocol",
+                "Hyper Transfer Protocol"
+            ],
+                correct: 0
+            },
+            {
+                question: "Which CSS property controls the text size?",
+                choices: [
+                "text-size",
+                "font-style",
+                "font-size",
+                "font-weight"
+            ],
+                correct: 2
+            },
+            {
+                question: "Which attribute provides alternate text for images in HTML?",
+                choices: [
+                "alt",
+                "src",
+                "title",
+                "href"
+            ],
+                correct: 0
+            },
+            {
+                question: "Which of these is NOT a JavaScript data type?",
+                choices: [
+                "string",
+                "float",
+                "boolean",
+                "number"
+            ],
+                correct: 3
+            }
+        ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    const quizContainer = document.getElementById('quiz-container');
+
+    // Function to display a question
+    function showQuestion() {
+        const currentQuestion = quizQuestions[currentQuestionIndex];
+        let questionHtml = '<div class="quiz-question">';
+        questionHtml += `<p class="question-text">${currentQuestion.question}</p>`;
+        questionHtml += '<form id="quiz-form">';
+        // Loop over each choice to build the radio inputs
+        currentQuestion.choices.forEach((choice, index) => {
+            questionHtml += `<div>
+                            <input type="radio" name="answer" id="choice${index}" value="${index}">
+                            <label for="choice${index}">${choice}</label>
+                            </div>`;
+        });
+        questionHtml += '<button type="submit" class="quiz-button">Submit Answer</button>';
+        questionHtml += '</form></div>';
+
+        quizContainer.innerHTML = questionHtml;
+
+        // Attach an event listener to the quiz form
+        const quizForm = document.getElementById("quiz-form");
+        quizForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const selected = document.querySelector('input[name="answer"]:checked');
+            if (selected) {
+            const answer = parseInt(selected.value);
+            if (answer === currentQuestion.correct) {
+                score++;
+            }
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizQuestions.length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+            } else {
+                alert("Please select an answer.");
+            }
+        });
+    }
+
+    // Function to show the final quiz results
+    function showResults() {
+        let resultHtml = `<div class="quiz-results">
+                            <h3>Your Score: ${score} / ${quizQuestions.length}</h3>
+                            <p>Thank you for taking the quiz!</p>
+                        </div>`;
+        quizContainer.innerHTML = resultHtml;
+    }
+
+        // Start the quiz
+        showQuestion();
+    </script>
+</body>
+</html>

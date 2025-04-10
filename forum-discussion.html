@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Discussion Board - IT Resource Hub</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
+            <h1>Community Forum</h1>
+        </header>
+        
+        <nav>
+            <div class="nav-container">
+                <a href="comforum.html" class="back-button">Back</a>
+                <ul class="center-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="comforum.html" class="active">Community Forum</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Discussion board-->
+        <section class="discussion-containers">
+            <h2>Discussion Board</h2>
+            <ul class="discussion-list" id="discussList">
+                <!--Discussions posted show here-->
+            </ul>
+            <!--Form to add post-->
+            <div class="discussion-form">
+                <textarea id="newPost" placeholder="Enter your message here..." rows="4"></textarea>
+                <button type="button" onclick="addPost()">Post Message</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 IT Resource Hub. All rights reserved.</p>
+        </footer>
+
+        <!--JavaScript-->
+        <script>
+            function addPost() {
+                var newPostText = document.getElementById("newPost").value.trim();
+                if (newPostText === "") {
+                    alert("Please enter a message.");
+                    return;
+                }
+                var postItem = document.createElement("li");
+                postItem.textContent = newPostText;
+                document.getElementById("discussList").appendChild(postItem);
+                /*Clears text area*/
+                document.getElementById("newPost").value = "";
+            }
+        </script>
+    </body>
+</html>

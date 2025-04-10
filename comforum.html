@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Forum - IT Resource Hub</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
-    <h1>Community Forum</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum - IT Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="Images/ITLogo.jpg" alt="IT Resource Hub Logo" class="logo">
+      <h1>Community Forum</h1>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="forum.html" class="active">Community Forum</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+    <nav>
+      <div class="nav-container">
+          <ul class="center-nav">
+              <li><a href="index.html" >Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="comforum.html" class="active">Community Forum</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </div>
   </nav>
 
-  <section class="forum-content">
-    <h2>Welcome to the Community Forum</h2>
-    <p>Connect with fellow learners and professionals. Ask questions, share ideas, and track your progress!</p>
-  
-    <div class="forum-item">
-        <img src="Images/Questions.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-        <h3>Q&A</h3>
-        <p>Post your IT questions here and get answers from the community.</p>
-    </div>
-  
-    <div class="forum-item">
-        <img src="Images/Board.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-        <h3>Discussion Board</h3>
-        <p>Join conversations about the latest trends, tools, and career paths.</p>
-    </div>
-  
-    <div class="forum-item">
-        <img src="Images/Progress.jpg" alt="Q&A" class="forum-icon" width="200" height="200">
-      <h3>Progress Tracking</h3>
-      <p>Keep track of your learning goals and achievements. Motivate others and stay accountable!</p>
-    </div>
-  </section>
+    <section class="forum-content">
+      <h2>Welcome to the Community Forum</h2>
+      <p>Connect with fellow learners and professionals. Ask questions, share ideas, and track your progress!</p>
+    
+      <div class="forum-cards">
+        <!-- Forum item 1: Q&A -->
+        <div class="forum-item">
+          <img src="Images/question.jpg" alt="Questions and Answers">
+          <h3>Q&A</h3>
+          <p>Post your IT questions here and get expert answers.</p>
+          <a href="comingsoon.html" class="forum-btn">Join Q&A</a>
+      </div>
+      
+        <!-- Forum item 2: Discussion Board -->
+      <div class="forum-item">
+          <img src="Images/discussion.jpg" alt="Discussion Board">
+          <h3>Discussion Board</h3>
+          <p>Join conversations about the latest trends, tools, and IT insights.</p>
+          <a href="forum-discussion.html" class="forum-btn">Join Discussion</a>
+      </div>
+      
+        <!-- Forum item 3: Progress Tracking -->
+      <div class="forum-item">
+        <img src="Images/progress.jpg" alt="Progress Tracking">
+        <h3>Progress Tracking</h3>
+        <p>Keep track of your learning goals and achievements, and motivate others.</p>
+        <a href="comingsoon.html" class="forum-btn">Track Progress</a>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 IT Resource Hub. All rights reserved.</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 IT Resource Hub. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

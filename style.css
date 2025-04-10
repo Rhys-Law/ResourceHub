@@ -6,19 +6,20 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #0099ff; /* Bright blue page background */
+    background-color: #0099ff; 
+    text-align: center;
   }
   
   header {
-    background-color: #000; /* black background */
+    background-color: #000; 
     color: #fff;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     position: relative;
     padding: 2rem;
   }
-  
   header .logo {
     position: absolute;
     left: 1rem;
@@ -26,7 +27,6 @@
     height: auto;
     margin-right: 1rem;
   }
-  
   header h1 {
     font-size: 1.8rem;
   }
@@ -34,16 +34,57 @@
   nav {
     background-color: #0099ff;
     padding: 0.5rem 0;
+    /*text-align: center;*/
   }
-  
   nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; 
+    /* justify-content: center; */
     gap: 1rem;
   }
-  
-  nav a {
+  .nav-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
+    background-color: #0099ff;
+  }
+  .back-button {
+    position: absolute;
+    left: 1rem;
+    background-color: #0099ff;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .center-nav {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  .center-nav li a, .back-button, nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: #0099ff;
+    border-radius: 4px;
+  }
+  .center-nav li a:hover, .back-button:hover, nav a:hover {
+    background-color: #0077cc;
+    color: #fff;
+  }
+  .center-nav li a.active {
+    background-color: #141290;
+    color: #fff;
+  }
+
+  .center-nav li a, .back-button, nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -51,36 +92,16 @@
     background-color: #0099ff; 
     border-radius: 4px;
   }
-  
-  nav a:hover {
-    background-color: #0077cc; 
-  }
-  
-  nav a.active {
-    background-color: #141290; 
-    color: #000;               
-  }
-  
-  
+
   .hero {
     width: 80%;
     margin: 1rem auto;
     text-align: center;
     padding: 1rem 0;
   }
-  
-  .placeholder-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 1rem;
-  }
-  
-  .placeholder-box {
-    width: 150px;
-    height: 150px;
-    background-color: #ccc; 
-    border: 2px solid #999;
-    border-radius: 4px;
+
+  ul { 
+    list-style-position: inside;
   }
   
   .hero-text {
@@ -89,17 +110,32 @@
     line-height: 1.4;
   }
   
-  
+  .placeholder-container {
+    display: flex;            
+    flex-wrap: nowrap;          /* Allow images to wrap on smaller screens */
+    justify-content: center;  
+    gap: 1rem;               
+  }
+  .placeholder-container img.hero-image {
+    display: block;       
+    margin: 0;            
+  }
   section {
     background-color: #fff;
     width: 80%;
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 8px;
+    text-align: center;
   }
   
   section h2 {
     margin-bottom: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   
@@ -111,49 +147,534 @@
     margin-top: 1rem;
   }
 
-.forum-content {
-  background-color: #fff;
-  width: 80%;
-  margin: 1rem auto;
-  padding: 1rem;
-  border-radius: 8px;
-}
+  /*Services page + subpages*/
+  
+  .services-content {
+    background-color: #fff;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
 
-.forum-item {
-  display: flex;
-  align-items: flex-start; 
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .services-item {
+    background-color: #fff;
+    display: inline-block;
+    width: 220px;
+    margin: 1rem 2%;
+    vertical-align: top;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .services-item img {
+    display: block;
+    margin: 0 auto;
+  }
+  .service-button {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  /* Button styling for service links */
+  .service-btn {
+    background-color: #141290;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .service-btn:hover {
+    background-color: #3d41df;
+    transform: translateY(-2px);
+  }
+  .coming-soon {
+    font-size: 1.2 rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #333;
+  }
+  .career-content {
+    background-color: #fff;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left; /* For readability, consider left-aligning paragraphs */
+  }
+  
+  .career-content h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .career-content h3 {
+    color: #141290; /* or any preferred color */
+    margin-top: 1rem;
+    border-bottom: 2px solid #141290;
+  }
+  
+  .career-content p, .career-content ul {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .career-content a {
+    color: #0077cc; /* adjust link color as needed */
+    text-decoration: underline;
+  }
+  
+  .coming-soon {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  .centered {
+    text-align: center;
+  }
 
-.forum-item h3 {
-  flex: 0 0 160px; 
-  margin: 0;       
-}
+  .challenge-text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #333;
+  }
+  .challenge-content {
+    width: 80%;
+    margin: 2rem auto;
+    background: linear-gradient(135deg, #edf2fb, #d7e3fc);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  .challenge-icon { 
+    width: 50px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+  .challenge-content h2 {
+    font-size: 2rem;
+    color: #141290;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin: 0;
+  }
+  .challenge-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 1rem auto;
+    max-width: 600px; /* limit line length for readability */
+    line-height: 1.5;
+  }
+  .challenge-action {
+    margin-top: 1.5rem;
+  }
+  .challenge-button {
+    background-color: #141290;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .challenge-button:hover {
+    background-color: #3d41df;
+    transform: translateY(-2px);
+  }
 
-.forum-item p {
-  flex: 1;
-  margin: 0;
-}
-
-.services-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 1rem 0;
-}
-
-.left-square img {
-  order: 0;
-}
-.left-square h3 {
-  order: 1;
-}
+/*Resources page + subpages*/
 
 
-.right-square h3 {
-  order: 0;
-}
-.right-square img {
-  order: 1;
-}
+  .resources-content {
+    background-color: #fff;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .resources-content h3 {
+    text-decoration: underline;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+  .resources-content p {
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .resource-button {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  .resource-btn {
+    background-color: #141290;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .resource-btn:hover {
+    background-color: #3d41df;
+    transform: translateY(-2px);
+  }
+  .resource-detail {
+    background-color: #fff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .resource-detail h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .resource-detail ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .resource-detail li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .resource-detail a {
+    color: #0077cc;
+    text-decoration: underline;
+  }
+
+  .quiz-content {
+    background-color: #fff;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .quiz-question {
+    margin-bottom: 1rem;
+  }
+
+  .quiz-question p.question-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .quiz-question div {
+    text-align: left;
+    margin: 0.5rem auto;
+    max-width: 600px;
+  }
+
+  .quiz-question input[type="radio"] {
+    margin-right: 0.5rem;
+  }
+
+  .quiz-button {
+    background-color: #141290;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .quiz-button:hover {
+    background-color: #3d41df;
+    transform: translateY(-2px);
+  }
+
+  .quiz-results h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .cert-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cert-list li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .cert-list img.cert-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+    border-radius: 5px;
+  }
+  .cert-list a:hover {
+    color: #005fa3;
+  }
+  .tools-list {
+    list-style: none; 
+    padding: 0; 
+    max-width: 600px; 
+    margin: 1rem auto;
+  }
+  .tools-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .tools-list img.tool-logo {
+    width: 80px; 
+    height: 80px;
+    justify-content: center;
+    margin-right: 1rem;
+    border-radius: 5px; 
+  }
+  .tools-list a {
+    color: #0077cc;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .tools-list a:hover {
+    color: #005fa3; 
+  }
+
+  .guidance-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  .guidance-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .guidance-list img.guidance-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+  }
+  .guidance-list a {
+    color: #0077cc;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .guidance-list a:hover {
+    color: #005fa3;
+  }
+  .guidance-description {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0 0.5rem;
+  }
+
+/*Com forum page*/
+
+
+  .forum-content {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forum-content h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .forum-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  /* Flex container for the forum cards */
+  .forum-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  /* Forum item "card" styling */
+  .forum-item {
+    background-color: #f9f9f9;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .forum-item img.forum-icon {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  .forum-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    color: #141290;
+  }
+  .forum-item p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  .forum-btn {
+    background-color: #141290;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .forum-btn:hover {
+    background-color: #3d41df;
+  }
+
+  /*Discussion board*/
+  .discussion-container {
+    background-color: #fff;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .discussion-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .discussion-list {
+    list-style: none;
+    padding: 0;
+  }
+  .discussion-list li {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+  }
+  .discussion-form {
+    margin-top: 1rem;
+  }
+  .discussion-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  .discussion-form button {
+    background-color: #141290;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3 ease, transform 0.3s ease;
+    display: block;
+    transform: translateY(-2px);
+  }
+  .discussion-form button:hover {
+    background-color: #3d41df;
+    transform: translateY(-2px);
+  }
+
+  /*Contact page */
+
+  /* Get in touch section */
+  .contact-info {
+    background: linear-gradient(135deg, #edf2fb, #d7e3fc);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem auto;
+    width: 80%;
+    text-align: left;
+  }
+  .contact-form {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0.1);
+    margin: 1rem auto;
+    width: 80%;
+    text-align: left;
+  }
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+  }
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .contact-form button {
+    background-color: #141290;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+    display: block;
+    margin: 0.5rem;
+  }
+  .contact-form button:hover {
+    background-color: #3d41df;
+  }
+
+  /*Coming soon*/
+  .coming-soon-content {
+    background-color: #fff;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #141290;
+  }
